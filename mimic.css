@@ -1,0 +1,191 @@
+
+body {
+  
+    font-family: ChevinMedium;
+     font-style: 20px;
+  }
+
+  textarea{
+  left:0;
+  border: 2px solid black;
+  font-family: ChevinMedium;
+  margin:20px;
+  top:10px;
+  }
+  
+  .led-red {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: #F00;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+    -webkit-animation: blinkRed 0.3s infinite;
+    -moz-animation: blinkRed 0.3s infinite;
+    -ms-animation: blinkRed 0.3s infinite;
+    -o-animation: blinkRed 0.3s infinite;
+    animation: blinkRed 0.3s infinite;
+  }
+  
+  
+  
+  @-webkit-keyframes blinkRed {
+      from { background-color: #F00; }
+      50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+      to { background-color: #F00; }
+  }
+  @-moz-keyframes blinkRed {
+      from { background-color: #F00; }
+      50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+      to { background-color: #F00; }
+  }
+  @-ms-keyframes blinkRed {
+      from { background-color: #F00; }
+      50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+      to { background-color: #F00; }
+  }
+  @-o-keyframes blinkRed {
+      from { background-color: #F00; }
+      50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+      to { background-color: #F00; }
+  }
+  @keyframes blinkRed {
+      from { background-color: #F00; }
+      50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+      to { background-color: #F00; }
+  }
+  .led-green {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: #ABFF00;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+  }
+
+  .led-yellow {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: #fafd34;
+    border-radius: 50%;
+    box-shadow: rgba(110, 110, 110, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+  }
+  
+  .container{
+  width:100%;
+  overflow:auto;
+  
+  }
+  .text-container{
+  float:left;
+  font-size: 75px;
+  
+  }
+  .icon-container{
+  float:center;
+  width:auto;
+  position: relative;
+  
+  
+  }
+  
+  #bottom {
+      position: float;
+      left: 0;
+      right: 0;
+      height: 15%;
+  }
+  #top{
+      position: float;
+      left: 0;
+      right: 0;
+      height: 85%;
+  }
+  #top {
+      top: 0;
+      background-color: #ecece0;
+  }
+  
+  #bottom {
+      bottom: 0;
+      background-color: #ecece0;
+  }
+  #tableborder{
+  border-radius: 30px;
+  }
+
+
+  
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0
+}
+
+.next {
+    right: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev {
+    left: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev:hover,
+.next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding-top: 12px;
+  padding-bottom: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #222428
+}
+
+
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+}
+
+.dot {
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    margin: 132px 15px 37px 19px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+.active,
+.dot:hover {
+    background-color: #717171
+}
+
+
+
+
