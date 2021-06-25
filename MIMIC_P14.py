@@ -42,6 +42,7 @@ def listtostring(s):
 
 def getStatus(logFile, txEnable):
     global spp,cnt
+    global LM3_flag,LM4_flag,LM5_flag,LM6_flag
     cnt = 0
     sensorStatus = 0
     scan_result = []
@@ -75,9 +76,9 @@ def getStatus(logFile, txEnable):
         logFile.write('\n')
         logFile.flush()
         RLY4.on()
-        #if(LM3_flag == 0):
-            #LM3_flag = 1
-            #RLY3.on() 
+        if(LM3_flag == 0):
+            LM3_flag = 1
+            RLY3.on() 
     else:
         logFile.write('1')
         logFile.write('\n')
@@ -90,9 +91,9 @@ def getStatus(logFile, txEnable):
         logFile.write('\n')
         logFile.flush()
         RLY4.on()
-        #if(LM4_flag == 0):
-            #LM4_flag = 1
-            #RLY3.on() 
+        if(LM4_flag == 0):
+            LM4_flag = 1
+            RLY3.on() 
     else:
         logFile.write('1')
         logFile.write('\n')
@@ -104,9 +105,9 @@ def getStatus(logFile, txEnable):
         logFile.write('\n')
         logFile.flush()
         RLY4.on()
-        #if(LM5_flag == 0):
-            #LM5_flag = 1
-            #RLY3.on() 
+        if(LM5_flag == 0):
+            LM5_flag = 1
+            RLY3.on() 
     else:
         logFile.write('1')
         logFile.write('\n')
@@ -118,9 +119,9 @@ def getStatus(logFile, txEnable):
         logFile.write('\n')
         logFile.flush()
         RLY4.on()
-        #if(LM6_flag == 0):
-            #LM6_flag = 1
-            #RLY3.on() 
+        if(LM6_flag == 0):
+            LM6_flag = 1
+            RLY3.on() 
     else:
         logFile.write('1')
         logFile.write('\n')
