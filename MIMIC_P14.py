@@ -198,7 +198,7 @@ def getStatus(logFile, txEnable):
         (scan_result[332] == '1') or(scan_result[333] == '1') or(scan_result[334] == '1') or(scan_result[335] == '1')):
 
         RLY4.on()   # R3 ON
-
+    """
     if((scan_result[131] == '0')  and  (scan_result[130] == '0') and (scan_result[129] == '0') and (scan_result[128] == '0') and
         (scan_result[127] == '0') and(scan_result[126] == '0') and(scan_result[125] == '0') and(scan_result[123] == '0') and
         (scan_result[122] == '0') and (scan_result[121] == '0')and(scan_result[120] == '0') and(scan_result[119] == '0') and
@@ -247,10 +247,90 @@ def getStatus(logFile, txEnable):
         (scan_result[320] == '0') and(scan_result[321] == '0') and(scan_result[322] == '0') and(scan_result[323] == '0') and
         (scan_result[324] == '0') and(scan_result[325] == '0') and(scan_result[326] == '0') and(scan_result[327] == '0') and
         (scan_result[328] == '0') and(scan_result[329] == '0') and(scan_result[330] == '0') and(scan_result[331] == '0') and
-        (scan_result[332] == '0') and(scan_result[333] == '0') and(scan_result[334] == '0') and(scan_result[335] == '0')):
-
+        (scan_result[332] == '0') and(scan_result[333] == '0') and(scan_result[334] == '0') and(scan_result[335] == '0')): """
+    #if there is no fault 
+    else: 
         RLY4.off()   #R3 OFF
     
+    # R1 - M8, M9, M10
+    if((scan_result[587] == '1')  or(scan_result[586] == '1') or (scan_result[585] == '1') or (scan_result[588] == '1') or
+        (scan_result[589] == '1')  or(scan_result[590] == '1')  or(scan_result[592] == '1')  or(scan_result[581] == '1')  or
+        (scan_result[580] == '1')  or(scan_result[593] == '1')  or(scan_result[594] == '1')  or(scan_result[579] == '1')  or
+        (scan_result[578] == '1')  or(scan_result[595] == '1')  or(scan_result[596] == '1') ):
+
+        RLY1.on()
+    else:
+        RLY1.off()
+
+
+    # R4 - M26, M28, M29
+    if((scan_result[361] == '1')  or(scan_result[360] == '1') or (scan_result[365] == '1') or (scan_result[366] == '1') or
+        (scan_result[358] == '1')  or(scan_result[359] == '1')  or(scan_result[357] == '1')  or(scan_result[356] == '1')  or
+        (scan_result[355] == '1')  or(scan_result[354] == '1')  or(scan_result[353] == '1')  or(scan_result[352] == '1')  or
+        (scan_result[351] == '1')  or(scan_result[350] == '1')  or(scan_result[349] == '1')  or (scan_result[348] == '1')  or
+        (scan_result[347] == '1')  or(scan_result[346] == '1') or (scan_result[345] == '1') or (scan_result[367] == '1') or
+        (scan_result[368] == '1')  or(scan_result[369] == '1')  or(scan_result[370] == '1')  or(scan_result[371] == '1')  or
+        (scan_result[372] == '1')  or(scan_result[373] == '1')  or(scan_result[374] == '1')  or(scan_result[375] == '1')  or
+        (scan_result[376] == '1')  or(scan_result[377] == '1')  or(scan_result[378] == '1') or(scan_result[379] == '1')  or
+        (scan_result[380] == '1')  or(scan_result[381] == '1')  or(scan_result[343] == '1')  or(scan_result[342] == '1')  or
+        (scan_result[341] == '1')  or(scan_result[340] == '1')  or(scan_result[339] == '1')  or(scan_result[337] == '1')  or
+        (scan_result[336] == '1')  or(scan_result[419] == '1')  or(scan_result[418] == '1')  or (scan_result[417] == '1')  or
+        (scan_result[416] == '1')  or(scan_result[415] == '1') or (scan_result[383] == '1') or (scan_result[384] == '1') or
+        (scan_result[385] == '1')  or(scan_result[386] == '1')  or(scan_result[387] == '1')  or(scan_result[389] == '1')  or
+        (scan_result[390] == '1')  or(scan_result[391] == '1')  or(scan_result[420] == '1')  or(scan_result[421] == '1')  or
+        (scan_result[422] == '1')  or(scan_result[423] == '1') ):
+
+        RLY5.on()
+    else:
+        RLY5.off()
+
+    # R2 - M11, M12, M13, M14,M15, M16    
+
+    if((scan_result[577] == '1')  or(scan_result[576] == '1') or (scan_result[575] == '1') or (scan_result[574] == '1') or
+        (scan_result[573] == '1') or(scan_result[572] == '1') or(scan_result[571] == '1') or(scan_result[570] == '1') or
+        (scan_result[569] == '1') or(scan_result[568] == '1') or(scan_result[567] == '1') or(scan_result[566] == '1') or
+        (scan_result[597] == '1') or(scan_result[598] == '1') or(scan_result[599] == '1') or(scan_result[600] == '1') or
+        (scan_result[601] == '1') or(scan_result[602] == '1') or(scan_result[603] == '1') or(scan_result[604] == '1') or
+        (scan_result[605] == '1') or(scan_result[606] == '1') or(scan_result[607] == '1') or(scan_result[608] == '1') or
+        (scan_result[565] == '1') or(scan_result[564] == '1') or(scan_result[563] == '1') or(scan_result[562] == '1') or
+        (scan_result[561] == '1') or(scan_result[27] == '1') or(scan_result[26] == '1') or(scan_result[25] == '1') or
+        (scan_result[24] == '1') or(scan_result[609] == '1') or(scan_result[610] == '1') or(scan_result[611] == '1') or
+        (scan_result[612] == '1') or(scan_result[613] == '1') or(scan_result[615] == '1') or(scan_result[28] == '1') or
+        (scan_result[29] == '1') or(scan_result[30] == '1') or(scan_result[23] == '1') or(scan_result[22] == '1') or
+        (scan_result[21] == '1') or(scan_result[20] == '1') or(scan_result[19] == '1') or(scan_result[18] == '1') or
+        (scan_result[17] == '1') or(scan_result[16] == '1') or(scan_result[15] == '1') or(scan_result[14] == '1') or
+        (scan_result[13] == '1') or(scan_result[12] == '1') or(scan_result[11] == '1') or(scan_result[10] == '1') or
+        (scan_result[9] == '1') or(scan_result[8] == '1') or(scan_result[31] == '1') or(scan_result[32] == '1') or
+        (scan_result[33] == '1') or(scan_result[34] == '1') or(scan_result[35] == '1') or(scan_result[36] == '1') or
+        (scan_result[37] == '1') or(scan_result[38] == '1') or(scan_result[39] == '1') or(scan_result[40] == '1') or
+        (scan_result[41] == '1') or(scan_result[42] == '1') or(scan_result[43] == '1') or(scan_result[44] == '1') or
+        (scan_result[45] == '1') or(scan_result[46] == '1') or(scan_result[7] == '1') or(scan_result[6] == '1') or
+        (scan_result[5] == '1') or(scan_result[4] == '1') or(scan_result[1] == '1') or(scan_result[0] == '1') or
+        (scan_result[83] == '1') or(scan_result[82] == '1') or(scan_result[81] == '1') or(scan_result[80] == '1') or
+        (scan_result[79] == '1') or(scan_result[78] == '1') or(scan_result[47] == '1') or(scan_result[48] == '1') or
+        (scan_result[49] == '1') or(scan_result[50] == '1') or
+        (scan_result[53] == '1') or(scan_result[54] == '1') or(scan_result[55] == '1') or(scan_result[84] == '1') or
+        (scan_result[85] == '1') or(scan_result[86] == '1') or(scan_result[87] == '1') or(scan_result[88] == '1') or
+        (scan_result[77] == '1') or(scan_result[76] == '1') or(scan_result[75] == '1') or(scan_result[74] == '1') or
+        (scan_result[73] == '1') or(scan_result[72] == '1') or(scan_result[71] == '1') or(scan_result[70] == '1') or
+        (scan_result[69] == '1') or(scan_result[68] == '1') or(scan_result[67] == '1') or(scan_result[66] == '1') or
+        (scan_result[65] == '1') or(scan_result[64] == '1') or(scan_result[63] == '1') or(scan_result[62] == '1') or
+        (scan_result[89] == '1') or(scan_result[90] == '1') or(scan_result[91] == '1') or(scan_result[92] == '1') or
+        (scan_result[93] == '1') or(scan_result[94] == '1') or(scan_result[95] == '1') or(scan_result[96] == '1') or
+        (scan_result[97] == '1') or(scan_result[98] == '1') or(scan_result[99] == '1') or(scan_result[100] == '1') or
+        (scan_result[101] == '1') or(scan_result[102] == '1') or(scan_result[103] == '1') or(scan_result[104] == '1') or
+        (scan_result[61] == '1') or(scan_result[60] == '1') or(scan_result[59] == '1') or(scan_result[58] == '1') or
+        (scan_result[139] == '1') or(scan_result[138] == '1') or(scan_result[137] == '1') or(scan_result[136] == '1') or
+        (scan_result[135] == '1') or(scan_result[134] == '1') or(scan_result[133] == '1') or(scan_result[132] == '1') or
+        (scan_result[105] == '1') or(scan_result[106] == '1') or(scan_result[107] == '1') or(scan_result[108] == '1') or
+        (scan_result[111] == '1') or(scan_result[140] == '1') or(scan_result[141] == '1') or(scan_result[142] == '1') or
+        (scan_result[143] == '1') or(scan_result[144] == '1') or(scan_result[145] == '1') or(scan_result[146] == '1')):
+
+        RLY2.on()
+    
+    else:
+        RLY2.off()
+
 
     if (cnt >= 1):
         Fault_flag = 1
