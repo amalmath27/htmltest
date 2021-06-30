@@ -282,6 +282,35 @@ def getStatus(logFile, txEnable):
     else:
         RLY2.off()
 
+    # R5- M35, M41
+
+    if((scan_result[413] == '1')   or(scan_result[412] == '1')  or (scan_result[411] == '1') or (scan_result[410] == '1') or
+        (scan_result[407] == '1')  or(scan_result[406] == '1')  or(scan_result[405] == '1')  or (scan_result[404] == '1') or
+        (scan_result[403] == '1')  or(scan_result[425] == '1')  or(scan_result[426] == '1')  or (scan_result[427] == '1') or
+        (scan_result[428] == '1')  or(scan_result[431] == '1')  or(scan_result[432] == '1')  or (scan_result[433] == '1') or
+        (scan_result[434] == '1')  or(scan_result[435] == '1')  or (scan_result[399] == '1') or (scan_result[398] == '1') or
+        (scan_result[397] == '1')  or(scan_result[396] == '1')  or(scan_result[395] == '1')  or (scan_result[394] == '1') or
+        (scan_result[393] == '1')  or(scan_result[392] == '1')  or(scan_result[475] == '1')  or (scan_result[439] == '1') or
+        (scan_result[440] == '1')  or(scan_result[441] == '1')  or(scan_result[442] == '1')  or (scan_result[443] == '1') or
+        (scan_result[444] == '1')  or(scan_result[445] == '1')  or(scan_result[446] == '1')  or (scan_result[447] == '1')):
+        
+        RLY6.on()
+    
+    else:
+        RLY6.off()
+    
+    # R6 - M31 , M44 
+    if((scan_result[473] == '1')   or(scan_result[472] == '1')  or (scan_result[477] == '1') or (scan_result[478] == '1') or
+        (scan_result[471] == '1')  or(scan_result[470] == '1')  or(scan_result[479] == '1')  or (scan_result[480] == '1') ):
+
+        RLY7.on()
+
+    else:
+
+        RLY7.off()
+
+    
+
 
     if (cnt >= 1):
         Fault_flag = 1
