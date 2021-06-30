@@ -848,6 +848,56 @@
 					}
 							break;
 
+						case 478:
+						if(DisArray[line] == 1){
+							document.getElementById("ly556").style.display = "block";
+							document.getElementById("lr556").style.display = "none";
+							document.getElementById("lg556").style.display = "none";
+
+						}	
+
+						else{
+						if (lines[line] == 0) {
+							document.getElementById("lg556").style.display = "block";
+							document.getElementById("lr556").style.display = "none";
+							document.getElementById("ly556").style.display = "none";
+							errMsg += "";
+
+						}
+						else {
+							document.getElementById("lr556").style.display = "block";
+							document.getElementById("lg556").style.display = "none";
+							document.getElementById("ly556").style.display = "none";
+							errMsg += "Sym roll-HNCSR: ";
+						}
+					}
+							break;
+
+							case 480:
+						if(DisArray[line] == 1){
+							document.getElementById("ly557").style.display = "block";
+							document.getElementById("lr557").style.display = "none";
+							document.getElementById("lg557").style.display = "none";
+
+						}	
+
+						else{
+						if (lines[line] == 0) {
+							document.getElementById("lg557").style.display = "block";
+							document.getElementById("lr557").style.display = "none";
+							document.getElementById("ly557").style.display = "none";
+							errMsg += "";
+
+						}
+						else {
+							document.getElementById("lr557").style.display = "block";
+							document.getElementById("lg557").style.display = "none";
+							document.getElementById("ly557").style.display = "none";
+							errMsg += "Sym roll-SNCNR: ";
+						}
+					}
+							break;
+
 						/*screen  2*/
 						case 577: 
 						
@@ -13146,8 +13196,36 @@
 					<tr height=100px>
 
 						<!----------------->
+						
 
-						<th colspan="3" style="color:white; font-size:70px;"></th>
+						
+
+						<td>
+							<div class="container">
+								<div class="text-container">
+									<span> Sym roll-HNCSR </span>
+								</div>
+							</div>
+						</td>
+
+						<td>
+							<div class="container">
+								
+							</div>
+						</td>
+
+
+
+						<td>
+							<div class="container">
+								<div class="icon-container" onclick="DisableFunction(478)">
+									<div class="led-green" id="lg556"></div>
+									<div class="led-red" id="lr556" style="display:none;"></div>
+									<div class="led-yellow" id="ly556" style="display:none;"></div>
+								</div>
+
+							</div>
+						</td>
 
 
 						<td>
@@ -13184,7 +13262,32 @@
 					<tr height=100px>
 
 						<!---------------->
-						<th colspan="3" style="color:white; font-size:70px;"></th>
+						<td>
+							<div class="container">
+								<div class="text-container">
+									<span> Sym roll-SNCNR </span>
+								</div>
+							</div>
+						</td>
+
+						<td>
+							<div class="container">
+								
+							</div>
+						</td>
+
+
+
+						<td>
+							<div class="container">
+								<div class="icon-container" onclick="DisableFunction(480)">
+									<div class="led-green" id="lg557"></div>
+									<div class="led-red" id="lr557" style="display:none;"></div>
+									<div class="led-yellow" id="ly557" style="display:none;"></div>
+								</div>
+
+							</div>
+						</td>
 						<td>
 							<div class="container">
 								<div class="text-container">
